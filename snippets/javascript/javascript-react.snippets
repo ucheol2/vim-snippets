@@ -42,10 +42,10 @@ snippet pt
 		${1}: React.PropTypes.${2:type},
 	}
 snippet rcc
-	class ${1:ClassName} extends React.Component {
+	class ${1:ClassName} extends Component {
 		render() {
 			return (
-				${0:<div />}
+				${0}
 			);
 		}
 	}
@@ -82,7 +82,25 @@ snippet prp i
 	this.props.${1}
 snippet ste i
 	this.state.${1}
+snippet connect
+	connect(${0})(${1});
+snippet iconnect
+	import { connect } from 'react-redux';
+snippet ibac
+	import { bindActionCreators } from 'redux';
+snippet module
+	import { Map, fromJS } from 'immutable';
+	import { createAction, handleActions } from 'redux-actions';
+	import { pender } from 'redux-pender';
 
+	export const ${1:action} = createAction(${2:Type, payload});
+
+	const initialState = Map({
+		${0}
+	});
+
+	export default handleActions({
+	}, initialState);
 # styled-compnents support
 snippet isty
 	import styled from 'styled-components'
@@ -429,30 +447,18 @@ snippet h6.
 	<h6 className="${1}">${0}</h6>
 snippet h6#
 	<h6 id="${1}">${0}</h6>
-snippet head
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
-		<title>${1:`substitute(vim_snippets#Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
-		${0}
-	</head>
-snippet header
 	<header>
 		${0}
 	</header>
-snippet header.
 	<header className="${1}">
 		${0}
 	</header>
-snippet header#
 	<header id="${1}">
 		${0}
 	</header>
-snippet hgroup
 	<hgroup>
 		${0}
 	</hgroup>
-snippet hgroup.
 	<hgroup className="${1}>
 		${0}
 	</hgroup>
@@ -785,16 +791,6 @@ snippet span#
 	<span id="${1}">${0}</span>
 snippet strong
 	<strong>${0}</strong>
-snippet style
-	<style type="text/css" media="${1:all}">
-		${0}
-	</style>
-snippet sub
-	<sub>${0}</sub>
-snippet summary
-	<summary>
-		${0}
-	</summary>
 snippet sup
 	<sup>${0}</sup>
 snippet table
