@@ -3,9 +3,8 @@ snippet ri1
 	import React from 'react'
 
 # Import both React and Component
-snippet ri2
+snippet ir2
 	import React, { Component } from 'react'
-	import PropTypes from 'prop-types'
 
 # React class
 snippet rcla
@@ -62,6 +61,11 @@ snippet rdp
 # Lifecycle Methods
 snippet rcdm
 	componentDidMount() {
+		${0:${VISUAL}}
+	}
+
+snippet rcwm
+	componentWillMount() {
 		${0:${VISUAL}}
 	}
 
