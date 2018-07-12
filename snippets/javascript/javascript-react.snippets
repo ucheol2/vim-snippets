@@ -93,7 +93,7 @@ snippet module
 	import { createAction, handleActions } from 'redux-actions';
 	import { pender } from 'redux-pender';
 
-	export const ${1:action} = createAction(${2:Type, payload});
+	export const ${1:action} = createAction(${2:Types, payload});
 
 	const initialState = Map({
 		${0}
@@ -101,6 +101,8 @@ snippet module
 
 	export default handleActions({
 	}, initialState);
+snippet itrans
+	import { translate } from 'react-i18next';
 # styled-compnents support
 snippet isty
 	import styled from 'styled-components'
@@ -578,13 +580,6 @@ snippet legend
 	<legend>${0}</legend>
 snippet legend+
 	<legend><span>${0}</span></legend>
-snippet li
-	<li>${0}</li>
-snippet li.
-	<li className="${1}">${0}</li>
-snippet li+
-	<li>${1}</li>
-	li+
 snippet lia
 	<li><a href="${0:#}">${1}</a></li>
 snippet lia+
