@@ -153,6 +153,10 @@ snippet ml
 	margin-left: ${0};
 snippet mb
 	margin-bottom: ${0};
+snippet mv
+	margin-vertical: ${0};
+snippet mh
+	margin-horizontal: ${0};
 
 snippet pa
 	padding: ${0};
@@ -250,10 +254,6 @@ snippet blockquote
 	<blockquote>
 		${0}
 	</blockquote>
-snippet body
-	<body>
-		${0}
-	</body>
 snippet br
 	<br />
 snippet button
@@ -475,40 +475,6 @@ snippet h6#
 	</hgroup>
 snippet hr
 	<hr />
-snippet html
-	<html>
-	${0}
-	</html>
-snippet xhtml
-	<html xmlns="http://www.w3.org/1999/xhtml">
-	${0}
-	</html>
-snippet html5
-	<!DOCTYPE html>
-	<html>
-		<head>
-			<meta charset="utf-8" />
-			<meta name="viewport" content="width=device-width" />
-			<title>${1:`substitute(vim_snippets#Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
-			${2:link}
-		</head>
-		<body>
-			${0:body}
-		</body>
-	</html>
-snippet html5l
-	<!DOCTYPE html>
-	<html lang="${1:es}">
-		<head>
-			<meta charset="utf-8" />
-			<meta name="viewport" content="width=device-width" />
-			<title>${2:`substitute(vim_snippets#Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
-			${3:link}
-		</head>
-		<body>
-			${0:body}
-		</body>
-	</html>
 snippet i
 	<i>${0}</i>
 snippet iframe
@@ -634,18 +600,6 @@ snippet samp
 	<samp>
 		${0}
 	</samp>
-snippet script
-	<script charset="utf-8">
-		${0}
-	</script>
-snippet scripts
-	<script src="${0}.js"></script>
-snippet scriptt
-	<script type="${1}" id="${2}">
-		${0}
-	</script>
-snippet scriptsrc
-	<script src="${0}.js" charset="utf-8"></script>
 snippet section
 	<section>
 		${0}
@@ -726,8 +680,6 @@ snippet thead
 	</thead>
 snippet time
 	<time datetime="${1}" pubdate="${2:$1}">${0:$1}</time>
-snippet title
-	<title>${0:`substitute(vim_snippets#Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
 snippet tr
 	<tr>
 		${0}
