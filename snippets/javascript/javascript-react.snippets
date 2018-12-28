@@ -1,9 +1,11 @@
 snippet ir
-	import React from 'react';
+	import React from 'react'
 snippet irc
-	import React, {Component} from 'react';
+	import React, { Component } from 'react'
 snippet ird
 	import ReactDOM from 'react-dom';
+snippet ipt
+	import PropTypes from 'prop-types'
 snippet cdm
 	componentDidMount() {
 		${1}
@@ -34,6 +36,7 @@ snippet dp
 	static defaultProps = {
 		${1}: ${2},
 	}
+snippet st
 	state = {
 		${1}: ${2},
 	}
@@ -46,7 +49,7 @@ snippet rcc
 		render() {
 			return (
 				${0}
-			);
+			)
 		}
 	}
 snippet rdr
@@ -71,9 +74,7 @@ snippet ren
 		);
 	}
 snippet sst
-	this.setState({
-		${1}: ${2}
-	});
+	this.setState({${1}: ${2}})
 snippet scu
 	shouldComponentUpdate(nextProps, nextState) {
 		${1}
@@ -85,7 +86,7 @@ snippet ste i
 snippet connect
 	connect(${0})(${1});
 snippet iconnect
-	import { connect } from 'react-redux';
+	import { connect } from 'react-redux'
 snippet ibac
 	import { bindActionCreators } from 'redux';
 snippet module
@@ -107,7 +108,7 @@ snippet module
 		}),
 	}, initialState);
 snippet itrans
-	import { translate } from 'react-i18next';
+	import { translate } from 'react-i18next'
 # styled-compnents support
 snippet isty
 	import styled from 'styled-components'
@@ -153,6 +154,10 @@ snippet ml
 	margin-left: ${0};
 snippet mb
 	margin-bottom: ${0};
+snippet mv
+	margin-vertical: ${0};
+snippet mh
+	margin-horizontal: ${0};
 
 snippet pa
 	padding: ${0};
@@ -250,10 +255,6 @@ snippet blockquote
 	<blockquote>
 		${0}
 	</blockquote>
-snippet body
-	<body>
-		${0}
-	</body>
 snippet br
 	<br />
 snippet button
@@ -475,40 +476,6 @@ snippet h6#
 	</hgroup>
 snippet hr
 	<hr />
-snippet html
-	<html>
-	${0}
-	</html>
-snippet xhtml
-	<html xmlns="http://www.w3.org/1999/xhtml">
-	${0}
-	</html>
-snippet html5
-	<!DOCTYPE html>
-	<html>
-		<head>
-			<meta charset="utf-8" />
-			<meta name="viewport" content="width=device-width" />
-			<title>${1:`substitute(vim_snippets#Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
-			${2:link}
-		</head>
-		<body>
-			${0:body}
-		</body>
-	</html>
-snippet html5l
-	<!DOCTYPE html>
-	<html lang="${1:es}">
-		<head>
-			<meta charset="utf-8" />
-			<meta name="viewport" content="width=device-width" />
-			<title>${2:`substitute(vim_snippets#Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
-			${3:link}
-		</head>
-		<body>
-			${0:body}
-		</body>
-	</html>
 snippet i
 	<i>${0}</i>
 snippet iframe
@@ -634,18 +601,6 @@ snippet samp
 	<samp>
 		${0}
 	</samp>
-snippet script
-	<script charset="utf-8">
-		${0}
-	</script>
-snippet scripts
-	<script src="${0}.js"></script>
-snippet scriptt
-	<script type="${1}" id="${2}">
-		${0}
-	</script>
-snippet scriptsrc
-	<script src="${0}.js" charset="utf-8"></script>
 snippet section
 	<section>
 		${0}
@@ -687,13 +642,6 @@ snippet sup
 	<sup>${0}</sup>
 snippet time
 	<time datetime="${1}" pubdate="${2:$1}">${0:$1}</time>
-snippet title
-	<title>${0:`substitute(vim_snippets#Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
-snippet tr+
-	<tr>
-		<td>${1}</td>
-		td+${0}
-	</tr>
 snippet track
 	<track src="${1}" srclang="${2}" label="${3}" default="${4:default} />${5}
 snippet ul
