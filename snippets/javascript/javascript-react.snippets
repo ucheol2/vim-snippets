@@ -90,23 +90,23 @@ snippet iconn
 snippet ibac
 	import { bindActionCreators } from 'redux';
 snippet module
-	import { Map, fromJS } from 'immutable';
-	import { createAction, handleActions } from 'redux-actions';
-	import { pender } from 'redux-pender';
+	import { Map, fromJS } from 'immutable'
+	import { createAction, handleActions } from 'redux-actions'
+	import { pender } from 'redux-pender'
 
-	import * as Types from '${1}';
+	import * as Types from '${1}'
 
-	export const ${2:action} = createAction(${3:Types, payload});
+	export const ${2:action} = createAction(${3:Types, payload})
 
 	const initialState = Map({
-	});
+	})
 
 	export default handleActions({
 		...pender({
 			type: ${4},
 			onSuccess: (state, action) => ${0},
 		}),
-	}, initialState);
+	}, initialState)
 snippet itrans
 	import { translate } from 'react-i18next'
 snippet icl
